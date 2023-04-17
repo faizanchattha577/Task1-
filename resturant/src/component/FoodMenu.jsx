@@ -6,13 +6,10 @@ function FoodMenu() {
   return (
     <div className="grid grid-col-3">
       <div className="h-full  flex flex-wrap justify-between bg-gray-100  items-center ">
-      {menu?.map((menu) => (
-        <Card key={menu.id}
-         menu={menu}
-    
-         />
-      ))}
-    </div>
+        {menu?.map((menu) => (
+          <Card key={menu.id} menu={menu} />
+        ))}
+      </div>
     </div>
   );
 }

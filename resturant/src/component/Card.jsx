@@ -1,22 +1,17 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import star from "../assets/star.svg";
 import starHalfFill from "../assets/star-half-fill.svg";
 import starNoFill from "../assets/star-no-fill.svg";
 import heart from "../assets/love.svg";
 import eye from "../assets/eye.svg";
-import { CartContext } from "../cartContext";
-
-const allCartItems = [];
+import { addItemToCart } from "../store/slices/CartSlice";
+import { useDispatch } from "react-redux";
 
 export default function Card({ menu }) {
-  const { addToCart } = useContext(CartContext);
-  const [cartItems, setCartItems] = useState([]);
+  const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    // setCartItems([...cartItems, menu]);
-    // allCartItems.push(...cartItems, menu);
-    // console.log(allCartItems);
-    addToCart(menu);
+    dispatch(addItemToCart(menu));
   };
 
   return (

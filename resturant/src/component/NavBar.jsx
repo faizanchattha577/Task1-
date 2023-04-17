@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import CartIcon from "./CartIcon";
-import { CartContext } from "../cartContext";
 import { Link } from "react-router-dom";
 
-
 const Navbar = () => {
-  const { cart, total } = useContext(CartContext);
+  // const { cart, total } = useContext(CartContext);
 
   return (
     <nav className="bg-gray-800">
@@ -50,11 +48,11 @@ const Navbar = () => {
                   </div>
                 </div>
                 <a className="justify-end flex">
-                  <Link to='/cart' className="bg-[#1F2937]  hover:bg-[#1F2937] text-white font-bold py-2 px-4 rounded"
-                    onClick={()=>{
-                     
-                      console.log(cart)
-                      console.log(total)
+                  <Link
+                    to="/cart"
+                    className="bg-[#1F2937]  hover:bg-[#1F2937] text-white font-bold py-2 px-4 rounded"
+                    onClick={() => {
+                    
                     }}
                   >
                     <CartIcon />

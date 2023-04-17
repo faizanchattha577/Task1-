@@ -8,8 +8,7 @@ function Footer() {
           <div className="w-full md:w-1/3 mb-4  md:mb-0">
             <h4 className="font-bold text-lg mb-4">About Us</h4>
             <p>
-              A team of developers working together to create  web
-              applications.
+              A team of developers working together to create web applications.
             </p>
           </div>
           <div className="w-full md:w-1/3 mb-4 md:mb-0">
